@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Подключение Манифеста PWA -->
+<link rel="manifest" href="/static/manifest.json">
+
+<!-- Иконка для закладок и главного экрана -->
+<link rel="icon" href="/static/icon-192.png" type="image/png" sizes="192x192">
+    <title>Автоматическое оформление титульного листа</title>
+    <style>
+        /* Минимальные стили для улучшения восприятия */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Оформление титульного листа</h1>
+        <form action="/generate" method="post">
+            <label for="projectTitle">Название проекта:</label>
+            <input type="text" id="projectTitle" name="projectTitle" placeholder="Введите название проекта" required />
+
+            <label for="projectType">Тип проекта:</label>
+            <select id="projectType" name="projectType" required>
+                <option value="" disabled selected>Выберите тип проекта</option>
+                <option value="Исследовательский">Исследовательский</option>
+                <option value="Творческий">Творческий</option>
+                <option value="Информационный">Информационный</option>
+                <option value="Прикладной">Прикладной</option>
+            </select>
+
+            <label for="studentName">Исполнитель:</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Введите ФИ ученика" required />
+
+            <label for="classNumber">Учащийся:</label>
+            <input type="text" id="classNumber" name="classNumber" placeholder="Введите номер класса" required />
+
+            <label for="supervisorName">Руководитель:</label>
+            <input type="text" id="supervisorName" name="supervisorName" placeholder="Введите ФИО руководителя проекта" required />
+
+            <label for="subjectTeacher">Учитель предмета:</label>
+            <input type="text" id="subjectTeacher" name="subjectTeacher" placeholder="Введите название предмета в родительном падеже (математики)" required />
+
+            <button type="submit">Создать титульный лист</button>
+        </form>
+    </div>
+</body>
+</html>

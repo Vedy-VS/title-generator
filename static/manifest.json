@@ -1,0 +1,22 @@
+{
+  "name": "Генератор титульных листов",
+  "short_name": "Титульный лист",
+  "description": "Автоматическое создание титульных листов для школьных проектов.",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007BFF",
+  "icons": [
+    {
+      "src": "/static/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
